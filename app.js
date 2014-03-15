@@ -18,10 +18,17 @@ app.set('view engine', 'ejs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
+app.configure(function(){
+app.use(express.methodOverride());
+app.use(express.bodyParser({keepExtensions:true,uploadDir:path.join(__dirname,'/public/uploads') }));
+
+});
+
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // development only
 if ('development' == app.get('env')) {
@@ -29,11 +36,13 @@ if ('development' == app.get('env')) {
 }
 
 function whatever(request, response){
- response.render('brittany', { background:'pink', name:request.query.firstname});
+ console.log(request.files);
+ var picture = '/uploads/' + path.basename(request.files.displayImage.path);
+ response.render('brittany', { background:'pink', picture:picture});
 }
 
 app.get('/', routes.index);
-app.get('/whatever', whatever);
+app.post('/whatever', whatever);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
