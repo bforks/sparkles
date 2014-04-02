@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
 function whatever(request, response){
  console.log(request.files);
  var picture = '/uploads/' + path.basename(request.files.displayImage.path);
- response.render('brittany', { background:'pink', picture:picture});
+ response.render('brittany', { picture:picture, title: '*watermelon*'});
 }
 
 app.get('/', routes.index);

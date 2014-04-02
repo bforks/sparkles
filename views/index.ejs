@@ -2,12 +2,16 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/normalize.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <form action="/whatever" method="post" enctype="multipart/form-data"> 
-    	<input type="file" name="displayImage">
-    	<input type="submit">
-    </form>
+    <div class="upload-cont absolute-center">        
+      <h1 id="masthead">sparkler</h1>
+        <form class="upload" action="/whatever" method="post" enctype="multipart/form-data"> 
+          <input type="file" name="displayImage">
+          <input type="submit">
+        </form>
+      </div>
   </body>
 </html>

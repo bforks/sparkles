@@ -1,8 +1,57 @@
+/* GLOBAL STYLEZ */
+
 body {
+  background-color: #f4bbd4;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/* INDEX.EJS */
+
+.upload-cont {
+	background-color: #fff;
+	padding: 20px;
+	height: 150px;
+	width: 350px;
+	text-align: center;
+}
+
+#masthead {
+	display: inline-block;
+	font: 12px "Menlo-regular", courier, monospace;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: pink;
+	padding: 20px;
+	border: 1px solid pink;
+	margin-bottom: 30px;
+}
+
+.upload {
+	padding: 20px 0;
+	margin: 0 auto;
+}
+
+/* BRITTANY.EJS */
+
+#decora-zone.center {
+	text-align: center;
+}
+
+#decora-zone img {
+	border: 15px solid white;
 }
