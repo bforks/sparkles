@@ -85,10 +85,16 @@ a {
 
 /* BRITTANY.EJS */
 
-#decora-zone.center {
-	text-align: center;
+#decora-zone .sticker {
+  z-index: 69;
+  position: absolute;
+  border: none;
+  top: 0;
+  left: 0;
 }
 
 #decora-zone img {
+  display: block;
 	border: 15px solid white;
+  margin: 100px auto 0;
 }
