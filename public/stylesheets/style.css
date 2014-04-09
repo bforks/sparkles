@@ -2,6 +2,7 @@
 
 body {
   background-color: #f4bbd4;
+  @-webkit-keyframes pulse { 0% {background-color: #45CEEF;} 25% {background-color: #FFF5A5;} 50% {background-color: #FFD4DA;} 75% {background-color: #99D2E4;} 100% {background-color: #D8CAB4;} } body { background-color: #45CEEF; -webkit-animation: pulse 40s infinite alternate; }
   padding: 50px;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -21,6 +22,42 @@ a {
 }
 
 /* INDEX.EJS */
+
+#index {
+  -webkit-animation: rainbowz 15s infinite alternate;   /* Chrome, Safari 5+ */
+     -moz-animation: rainbowz 15s infinite alternate;   /* Firefox 5-15 */
+       -o-animation: rainbowz 15s infinite alternate;   /* Opera 12.00 */
+          animation: rainbowz 15s infinite alternate;   /* Chrome, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+@-webkit-keyframes rainbowz {
+  0%   { background-color: #F6A5DA; }
+  25%  { background-color: #FFEBB7; }
+  50%  { background-color: #9DE8B3; }
+  75%  { background-color: #AADEFF; }
+  100% { background-color: #BEB7FF; }
+}
+@-moz-keyframes rainbowz {
+  0%   { background-color: #F6A5DA; }
+  25%  { background-color: #FFEBB7; }
+  50%  { background-color: #9DE8B3; }
+  75%  { background-color: #AADEFF; }
+  100% { background-color: #BEB7FF; }
+}
+@-o-keyframes rainbowz {
+  0%   { background-color: #F6A5DA; }
+  25%  { background-color: #FFEBB7; }
+  50%  { background-color: #9DE8B3; }
+  75%  { background-color: #AADEFF; }
+  100% { background-color: #BEB7FF; }
+}
+@keyframes rainbowz {
+  0%   { background-color: #F6A5DA; }
+  25%  { background-color: #FFEBB7; }
+  50%  { background-color: #9DE8B3; }
+  75%  { background-color: #AADEFF; }
+  100% { background-color: #BEB7FF; }
+}
 
 .upload-cont {
 	background-color: #fff;

@@ -4,11 +4,12 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/normalize.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
-  <body>
-    <div class="upload-cont absolute-center">        
+  <body id="index">
+    <div class="upload-cont absolute-center">
       <h1 id="masthead">sparkler</h1>
-        <form class="upload" action="/whatever" method="post" enctype="multipart/form-data"> 
+        <form class="upload" action="/whatever" method="post" enctype="multipart/form-data">
           <input type="file" name="displayImage">
           <input type="submit">
         </form>
